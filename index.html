@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +9,25 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-        
+
         :root {
             --bg-warm: #fdfcfb;
             --emerald-600: #059669;
             --slate-800: #1e293b;
         }
 
-        body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-warm);
             color: var(--slate-800);
         }
 
-        .chart-container { 
-            position: relative; 
-            width: 100%; 
-            max-width: 700px; 
-            margin: auto; 
-            height: 350px; 
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: auto;
+            height: 350px;
             max-height: 400px;
         }
 
@@ -69,18 +70,22 @@
             border-radius: 50%;
             background: var(--emerald-600);
             cursor: pointer;
-            box-shadow: 0 0 2px 0 rgba(0,0,0,0.5);
+            box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
+
 <body class="antialiased">
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center text-white font-black text-xl italic">G</div>
-                <span class="font-extrabold text-xl tracking-tight">GREENOPS <span class="text-emerald-600">PRO</span></span>
+                <div
+                    class="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center text-white font-black text-xl italic">
+                    G</div>
+                <span class="font-extrabold text-xl tracking-tight">GREENOPS <span
+                        class="text-emerald-600">PRO</span></span>
             </div>
             <div class="hidden lg:flex items-center gap-8 text-sm font-bold text-slate-500 uppercase tracking-widest">
                 <a href="#contexto" class="hover:text-emerald-600 transition">Contexto</a>
@@ -88,7 +93,8 @@
                 <a href="#tecnologia" class="hover:text-emerald-600 transition">Tecnologia</a>
                 <a href="#esg" class="hover:text-emerald-600 transition">Impacto ESG</a>
                 <a href="#simulador" class="hover:text-emerald-600 transition">ROI</a>
-                <a href="#roadmap" class="bg-emerald-600 text-white px-5 py-2.5 rounded-full hover:bg-emerald-700 transition shadow-lg shadow-emerald-200">Apresentação</a>
+                <a href="#roadmap"
+                    class="bg-emerald-600 text-white px-5 py-2.5 rounded-full hover:bg-emerald-700 transition shadow-lg shadow-emerald-200">Apresentação</a>
             </div>
         </div>
     </nav>
@@ -96,28 +102,37 @@
     <!-- Section 1: Hero -->
     <header class="pt-40 pb-24 px-6 relative overflow-hidden">
         <div class="max-w-6xl mx-auto text-center relative z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-xs font-bold mb-8 border border-emerald-100 animate-bounce">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-xs font-bold mb-8 border border-emerald-100 animate-bounce">
                 <span>NEW</span> Projeto A3 - Sustentabilidade e Competitividade
             </div>
             <h1 class="text-6xl md:text-8xl font-black text-slate-900 mb-8 leading-[1.05] tracking-tight">
-                Arquitetura <span class="text-emerald-600 underline decoration-emerald-100 underline-offset-8">Zero Desperdício</span>
+                Arquitetura <span class="text-emerald-600 underline decoration-emerald-100 underline-offset-8">Zero
+                    Desperdício</span>
             </h1>
             <p class="text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed mb-12">
-                Como as gigantes do E-commerce estão convertendo o custo invisível da ociosidade digital em vantagem competitiva sustentável através de Inteligência Artificial e Cultura GreenOps.
+                Como as gigantes do E-commerce estão convertendo o custo invisível da ociosidade digital em vantagem
+                competitiva sustentável através de Inteligência Artificial e Cultura GreenOps.
             </p>
             <div class="flex flex-wrap justify-center gap-6">
                 <div class="p-4 bg-white border border-slate-100 rounded-2xl shadow-sm min-w-[200px]">
                     <span class="block text-3xl font-black text-emerald-600" id="liveWaste">0</span>
-                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">TWh desperdiçados hoje</span>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">TWh desperdiçados
+                        hoje</span>
                 </div>
                 <div class="p-4 bg-white border border-slate-100 rounded-2xl shadow-sm min-w-[200px]">
                     <span class="block text-3xl font-black text-slate-800">1.5%</span>
-                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Consumo Mundial de Energia</span>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Consumo Mundial de
+                        Energia</span>
                 </div>
             </div>
         </div>
-        <div class="absolute top-1/2 left-0 w-96 h-96 bg-emerald-50 rounded-full mix-blend-multiply filter blur-3xl opacity-30 -translate-y-1/2"></div>
-        <div class="absolute top-1/3 right-0 w-80 h-80 bg-blue-50 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div
+            class="absolute top-1/2 left-0 w-96 h-96 bg-emerald-50 rounded-full mix-blend-multiply filter blur-3xl opacity-30 -translate-y-1/2">
+        </div>
+        <div
+            class="absolute top-1/3 right-0 w-80 h-80 bg-blue-50 rounded-full mix-blend-multiply filter blur-3xl opacity-30">
+        </div>
     </header>
 
     <!-- Section 2: O Contexto Global -->
@@ -127,16 +142,21 @@
                 <div>
                     <h2 class="text-4xl font-extrabold text-slate-900 mb-6">A Crise Energética da TI Invisível</h2>
                     <p class="text-slate-600 mb-8 leading-relaxed">
-                        Data centers não são apenas depósitos de arquivos; são fábricas de calor ininterruptas. Segundo a IEA, o consumo global de TI deve dobrar até 2030 devido à IA. No E-commerce, o desperdício é um subproduto direto da <b>Segurança Operacional</b>: empresas compram infraestrutura para a Black Friday e pagam por ela o ano todo.
+                        Data centers não são apenas depósitos de arquivos; são fábricas de calor ininterruptas. Segundo
+                        a IEA(Agência Internacional de Energia), o consumo global de TI deve dobrar até 2030 devido à IA. No E-commerce, o desperdício é
+                        um subproduto direto da <b>Segurança Operacional</b>: empresas compram infraestrutura para a
+                        Black Friday e pagam por ela o ano todo.
                     </p>
                     <div class="space-y-4">
                         <div class="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border-l-4 border-emerald-500">
                             <span class="text-2xl font-bold">415</span>
-                            <span class="text-sm text-slate-600">Terawatts-hora consumidos anualmente por Data Centers no mundo.</span>
+                            <span class="text-sm text-slate-600">Terawatts-hora consumidos anualmente por Data Centers
+                                no mundo.</span>
                         </div>
                         <div class="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border-l-4 border-blue-500">
                             <span class="text-2xl font-bold">945</span>
-                            <span class="text-sm text-slate-600">Projeção para 2030, ultrapassando o consumo de países como a Alemanha.</span>
+                            <span class="text-sm text-slate-600">Projeção para 2030, ultrapassando o consumo de países
+                                como a Alemanha.</span>
                         </div>
                     </div>
                 </div>
@@ -151,29 +171,40 @@
     <section id="problema" class="py-24 bg-slate-50 px-6 border-y border-slate-100">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <span class="text-emerald-600 font-black text-xs uppercase tracking-tighter">O Gargalo Operacional</span>
+                <span class="text-emerald-600 font-black text-xs uppercase tracking-tighter">O Gargalo
+                    Operacional</span>
                 <h2 class="text-4xl font-extrabold text-slate-900 mt-2">A Epidemia dos Servidores Zumbi</h2>
-                <p class="text-slate-500 mt-4 max-w-2xl mx-auto">Estimativas indicam que até 30% dos servidores ligados no E-commerce não realizam trabalho útil.</p>
+                <p class="text-slate-500 mt-4 max-w-2xl mx-auto">Estimativas indicam que até 30% dos servidores ligados
+                    no E-commerce não realizam trabalho útil.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="glass-card p-8 rounded-3xl text-center">
-                    <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">!</div>
-                    <h3 class="font-bold text-xl mb-3">Comatose Servers</h3>
-                    <p class="text-sm text-slate-500">Servidores que consomem 100% da energia nominal mas operam com 0% de CPU ativa.</p>
+                    <div
+                        class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                        !</div>
+                    <h3 class="font-bold text-xl mb-3">Servidores Zumbi</h3>
+                    <p class="text-sm text-slate-500">Servidores que consomem 100% da energia nominal mas operam com 0%
+                        de CPU ativa.</p>
                 </div>
                 <div class="glass-card p-8 rounded-3xl text-center border-emerald-200">
-                    <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">1.6</div>
-                    <h3 class="font-bold text-xl mb-3">PUE Ineficiente</h3>
-                    <p class="text-sm text-slate-500">Para cada watt de cálculo, gasta-se quase outro watt apenas em refrigeração.</p>
+                    <div
+                        class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                        1.6</div>
+                    <h3 class="font-bold text-xl mb-3">PUE(Eficácia no Uso de Energia) Ineficiente</h3>
+                    <p class="text-sm text-slate-500">Para cada watt de cálculo, gasta-se quase outro watt apenas em
+                        refrigeração.</p>
                 </div>
                 <div class="glass-card p-8 rounded-3xl text-center">
-                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">80%</div>
+                    <div
+                        class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                        80%</div>
                     <h3 class="font-bold text-xl mb-3">Ociosidade</h3>
-                    <p class="text-sm text-slate-500">Capacidade excedente mantida "por precaução" em 360 dias do ano.</p>
+                    <p class="text-sm text-slate-500">Capacidade excedente mantida "por precaução" em 360 dias do ano.
+                    </p>
                 </div>
             </div>
-            
+
             <div class="mt-20 chart-container">
                 <canvas id="idleTrendChart"></canvas>
             </div>
@@ -190,23 +221,33 @@
                     </div>
                 </div>
                 <div class="order-1 lg:order-2">
-                    <h2 class="text-4xl font-extrabold mb-6 italic">Arquitetura Inteligente <br><span class="text-emerald-400">Follow-the-Sun</span></h2>
+                    <h2 class="text-4xl font-extrabold mb-6 italic">Arquitetura Inteligente <br><span
+                            class="text-emerald-400">Follow-the-Sun</span></h2>
                     <p class="text-slate-400 mb-8 leading-relaxed">
-                        Nossa inovação não é estática. A plataforma utiliza <b>Geo-Orquestração Preditiva</b>. Quando o e-commerce brasileiro entra em horário de baixa (madrugada), a IA identifica tarefas de background e as "transporta" digitalmente para regiões onde o sol está brilhando ou o vento soprando forte (Escandinávia, Texas), utilizando 100% de energia renovável excedente.
+                        Nossa inovação não é estática. A plataforma utiliza <b>Geo-Orquestração Preditiva</b>. Quando o
+                        e-commerce brasileiro entra em horário de baixa (madrugada), a IA identifica tarefas de
+                        background e as "transporta" digitalmente para regiões onde o sol está brilhando ou o vento
+                        soprando forte (Escandinávia, Texas), utilizando 100% de energia renovável excedente.
                     </p>
                     <ul class="space-y-6">
                         <li class="flex gap-4">
-                            <div class="flex-none w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">1</div>
+                            <div
+                                class="flex-none w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+                                1</div>
                             <div>
                                 <h4 class="font-bold">Mapeamento de Intensidade de Carbono</h4>
-                                <p class="text-sm text-slate-500">Análise em tempo real da matriz energética de cada data center disponível.</p>
+                                <p class="text-sm text-slate-500">Análise em tempo real da matriz energética de cada
+                                    data center disponível.</p>
                             </div>
                         </li>
                         <li class="flex gap-4">
-                            <div class="flex-none w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">2</div>
+                            <div
+                                class="flex-none w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+                                2</div>
                             <div>
                                 <h4 class="font-bold">Desprovisionamento Elástico</h4>
-                                <p class="text-sm text-slate-500">Desligamento automático de servidores zumbi detectados pela telemetria.</p>
+                                <p class="text-sm text-slate-500">Desligamento automático de servidores zumbi detectados
+                                    pela telemetria.</p>
                             </div>
                         </li>
                     </ul>
@@ -227,18 +268,21 @@
                 <div class="p-10 rounded-[40px] bg-emerald-50 border border-emerald-100">
                     <div class="text-emerald-600 font-black text-5xl mb-6">E</div>
                     <h4 class="font-extrabold text-xl mb-4">Ambiental</h4>
-                    <p class="text-sm text-slate-600 leading-relaxed">Redução direta de emissões de Escopo 2. Mitigação da pegada hídrica de refrigeração e extensão do ciclo de vida do hardware (menos e-waste).</p>
+                    <p class="text-sm text-slate-600 leading-relaxed">Redução direta de emissões de Escopo 2. Mitigação
+                        da pegada hídrica de refrigeração e extensão do ciclo de vida do hardware (menos e-waste).</p>
                 </div>
                 <div class="p-10 rounded-[40px] bg-blue-50 border border-blue-100">
                     <div class="text-blue-600 font-black text-5xl mb-6">S</div>
                     <h4 class="font-extrabold text-xl mb-4">Social</h4>
-                    <p class="text-sm text-slate-600 leading-relaxed">Alívio da pressão nas matrizes energéticas locais das cidades que abrigam data centers, liberando energia para serviços públicos essenciais.</p>
+                    <p class="text-sm text-slate-600 leading-relaxed">Alívio da pressão nas matrizes energéticas locais
+                        das cidades que abrigam data centers, liberando energia para serviços públicos essenciais.</p>
                 </div>
                 <div class="p-10 rounded-[40px] bg-slate-900 text-white shadow-2xl">
                     <div class="text-emerald-400 font-black text-5xl mb-6">G</div>
                     <h4 class="font-extrabold text-xl mb-4">Governança</h4>
                     <h5 class="text-[10px] uppercase font-bold text-emerald-400 mb-2">Transparência Digital</h5>
-                    <p class="text-sm text-slate-400 leading-relaxed">Criação de dashboards auditáveis que provam a descarbonização da TI para conselhos administrativos e investidores.</p>
+                    <p class="text-sm text-slate-400 leading-relaxed">Criação de dashboards auditáveis que provam a
+                        descarbonização da TI para conselhos administrativos e investidores.</p>
                 </div>
             </div>
         </div>
@@ -249,32 +293,40 @@
         <div class="max-w-6xl mx-auto bg-white rounded-[50px] shadow-xl p-8 md:p-16 relative">
             <div class="grid lg:grid-cols-2 gap-12 items-start">
                 <div>
-                    <h2 class="text-4xl font-extrabold text-slate-900 mb-4">Centro de Inteligência <span class="text-emerald-600">ROI</span></h2>
-                    <p class="text-slate-500 mb-10">Ajuste os parâmetros da sua infraestrutura para ver o impacto em tempo real.</p>
-                    
+                    <h2 class="text-4xl font-extrabold text-slate-900 mb-4">Centro de Inteligência <span
+                            class="text-emerald-600">ROI</span></h2>
+                    <p class="text-slate-500 mb-10">Ajuste os parâmetros da sua infraestrutura para ver o impacto em
+                        tempo real.</p>
+
                     <div class="space-y-8">
                         <div>
                             <div class="flex justify-between mb-4">
-                                <label class="text-xs font-black uppercase tracking-widest text-slate-400">Total de Servidores</label>
+                                <label class="text-xs font-black uppercase tracking-widest text-slate-400">Total de
+                                    Servidores</label>
                                 <span class="text-emerald-600 font-bold" id="valServers">200</span>
                             </div>
                             <input type="range" id="inputServers" min="10" max="2000" value="200" class="w-full">
                         </div>
-                        
+
                         <div class="grid grid-cols-2 gap-6">
                             <div>
                                 <div class="flex justify-between mb-4">
-                                    <label class="text-[10px] font-black uppercase tracking-tight text-slate-400">Eficiência (PUE)</label>
+                                    <label
+                                        class="text-[10px] font-black uppercase tracking-tight text-slate-400">Eficiência
+                                        (PUE)</label>
                                     <span class="text-emerald-600 font-bold" id="valPue">1.6</span>
                                 </div>
-                                <input type="range" id="inputPue" min="1.1" max="2.0" step="0.1" value="1.6" class="w-full">
+                                <input type="range" id="inputPue" min="1.1" max="2.0" step="0.1" value="1.6"
+                                    class="w-full">
                             </div>
                             <div>
                                 <div class="flex justify-between mb-4">
-                                    <label class="text-[10px] font-black uppercase tracking-tight text-slate-400">Custo kWh (R$)</label>
+                                    <label class="text-[10px] font-black uppercase tracking-tight text-slate-400">Custo
+                                        kWh (R$)</label>
                                     <span class="text-emerald-600 font-bold" id="valKwh">0.85</span>
                                 </div>
-                                <input type="range" id="inputKwh" min="0.4" max="1.5" step="0.05" value="0.85" class="w-full">
+                                <input type="range" id="inputKwh" min="0.4" max="1.5" step="0.05" value="0.85"
+                                    class="w-full">
                             </div>
                         </div>
                     </div>
@@ -283,11 +335,13 @@
                     <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="p-6 bg-slate-900 rounded-3xl text-white flex flex-col justify-center min-h-[140px]">
                             <span class="text-[10px] text-slate-400 uppercase font-bold mb-2">Economia Mensal</span>
-                            <div class="text-xl md:text-2xl lg:text-3xl font-black text-emerald-400 break-words" id="resSavings">R$ 0,00</div>
+                            <div class="text-xl md:text-2xl lg:text-3xl font-black text-emerald-400 break-words"
+                                id="resSavings">R$ 0,00</div>
                         </div>
                         <div class="p-6 border border-slate-100 rounded-3xl flex flex-col justify-center min-h-[140px]">
                             <span class="text-[10px] text-slate-400 uppercase font-bold mb-2">Carbono Evitado</span>
-                            <div class="text-xl md:text-2xl lg:text-3xl font-black text-slate-800 break-words" id="resCo2">0 Ton</div>
+                            <div class="text-xl md:text-2xl lg:text-3xl font-black text-slate-800 break-words"
+                                id="resCo2">0 Ton</div>
                         </div>
                     </div>
                 </div>
@@ -310,31 +364,40 @@
 
             <div class="relative space-y-12">
                 <div class="step-line"></div>
-                
+
                 <div class="relative pl-16 group">
-                    <div class="absolute left-0 w-10 h-10 bg-white border-4 border-emerald-600 rounded-full z-10 flex items-center justify-center font-bold text-emerald-600">1</div>
+                    <div
+                        class="absolute left-0 w-10 h-10 bg-white border-4 border-emerald-600 rounded-full z-10 flex items-center justify-center font-bold text-emerald-600">
+                        1</div>
                     <div class="glass-card p-8 rounded-3xl group-hover:bg-emerald-50 transition">
                         <h4 class="font-extrabold text-xl mb-2">Fase de Diagnóstico (Crawl)</h4>
                         <p class="text-sm text-slate-500 italic mb-4">Meses 1-2</p>
-                        <p class="text-slate-600">Instalação de agentes de telemetria não invasivos para identificar ociosidade crônica e "servidores zumbi" sem interrupção de serviço.</p>
+                        <p class="text-slate-600">Instalação de agentes de telemetria não invasivos para identificar
+                            ociosidade crônica e "servidores zumbi" sem interrupção de serviço.</p>
                     </div>
                 </div>
 
                 <div class="relative pl-16 group">
-                    <div class="absolute left-0 w-10 h-10 bg-white border-4 border-blue-600 rounded-full z-10 flex items-center justify-center font-bold text-blue-600">2</div>
+                    <div
+                        class="absolute left-0 w-10 h-10 bg-white border-4 border-blue-600 rounded-full z-10 flex items-center justify-center font-bold text-blue-600">
+                        2</div>
                     <div class="glass-card p-8 rounded-3xl group-hover:bg-blue-50 transition">
                         <h4 class="font-extrabold text-xl mb-2">Automação Inteligente (Walk)</h4>
                         <p class="text-sm text-slate-500 italic mb-4">Meses 3-6</p>
-                        <p class="text-slate-600">Ativação da IA para desprovisionamento dinâmico e orquestração de workloads conforme a matriz energética regional.</p>
+                        <p class="text-slate-600">Ativação da IA para desprovisionamento dinâmico e orquestração de
+                            workloads conforme a matriz energética regional.</p>
                     </div>
                 </div>
 
                 <div class="relative pl-16 group">
-                    <div class="absolute left-0 w-10 h-10 bg-white border-4 border-slate-900 rounded-full z-10 flex items-center justify-center font-bold text-slate-900">3</div>
+                    <div
+                        class="absolute left-0 w-10 h-10 bg-white border-4 border-slate-900 rounded-full z-10 flex items-center justify-center font-bold text-slate-900">
+                        3</div>
                     <div class="glass-card p-8 rounded-3xl group-hover:bg-slate-100 transition">
                         <h4 class="font-extrabold text-xl mb-2">Governança ESG (Run)</h4>
                         <p class="text-sm text-slate-500 italic mb-4">Mês 6+</p>
-                        <p class="text-slate-600">Liberação de dashboards executivos e relatórios de sustentabilidade integrados para auditoria externa e compliance ambiental.</p>
+                        <p class="text-slate-600">Liberação de dashboards executivos e relatórios de sustentabilidade
+                            integrados para auditoria externa e compliance ambiental.</p>
                     </div>
                 </div>
             </div>
@@ -344,23 +407,28 @@
     <!-- Section 8: Glossário Estratégico -->
     <section class="py-24 bg-slate-50 px-6 border-t border-slate-200">
         <div class="max-w-6xl mx-auto text-center">
-            <h3 class="text-2xl font-black text-slate-400 mb-12 uppercase tracking-widest italic">Base de Conhecimento do Projeto</h3>
+            <h3 class="text-2xl font-black text-slate-400 mb-12 uppercase tracking-widest italic">Base de Conhecimento
+                do Projeto</h3>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition">
                     <h5 class="text-emerald-600 font-bold text-xs uppercase mb-2">FinOps</h5>
-                    <p class="text-[11px] text-slate-500">Gestão financeira de nuvem que foca em extrair o valor máximo de cada real gasto.</p>
+                    <p class="text-[11px] text-slate-500">Gestão financeira de nuvem que foca em extrair o valor máximo
+                        de cada real gasto.</p>
                 </div>
                 <div class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition">
                     <h5 class="text-emerald-600 font-bold text-xs uppercase mb-2">Workload Shifting</h5>
-                    <p class="text-[11px] text-slate-500">Prática de mover o processamento de dados para locais ou horários com energia mais barata/limpa.</p>
+                    <p class="text-[11px] text-slate-500">Prática de mover o processamento de dados para locais ou
+                        horários com energia mais barata/limpa.</p>
                 </div>
                 <div class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition">
                     <h5 class="text-emerald-600 font-bold text-xs uppercase mb-2">Escopo 2 (GHG)</h5>
-                    <p class="text-[11px] text-slate-500">Emissões indiretas provenientes da eletricidade comprada pela empresa para operar.</p>
+                    <p class="text-[11px] text-slate-500">Emissões indiretas provenientes da eletricidade comprada pela
+                        empresa para operar.</p>
                 </div>
                 <div class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition">
                     <h5 class="text-emerald-600 font-bold text-xs uppercase mb-2">Hyperscale</h5>
-                    <p class="text-[11px] text-slate-500">Arquitetura de TI capaz de escalar massivamente (ex: AWS, Google Cloud).</p>
+                    <p class="text-[11px] text-slate-500">Arquitetura de TI capaz de escalar massivamente (ex: AWS,
+                        Google Cloud).</p>
                 </div>
             </div>
         </div>
@@ -368,17 +436,22 @@
 
     <!-- Footer -->
     <footer class="py-16 bg-slate-900 text-slate-500 px-6">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 border-b border-slate-800 pb-12 mb-12 text-center md:text-left">
+        <div
+            class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 border-b border-slate-800 pb-12 mb-12 text-center md:text-left">
             <div>
-                <span class="font-black text-white text-lg tracking-tight">GREENOPS <span class="text-emerald-500 italic">PRO</span></span>
-                <p class="text-xs mt-2 max-w-xs">Projeto acadêmico focado em inovação, sustentabilidade e competitividade no mercado digital.</p>
+                <span class="font-black text-white text-lg tracking-tight">GREENOPS <span
+                        class="text-emerald-500 italic">PRO</span></span>
+                <p class="text-xs mt-2 max-w-xs">Projeto acadêmico focado em inovação, sustentabilidade e
+                    competitividade no mercado digital.</p>
             </div>
             <div class="md:text-right">
                 <p class="text-xs font-bold text-white mb-2 uppercase">Integrantes do Grupo</p>
-                <p class="text-[10px]">Lucas Ratti • Lucas Gianfaldoni • José Victor • Vinicius Auricchio • Kauã Belizario</p>
+                <p class="text-[10px]">Lucas Ratti • Lucas Gianfaldoni • José Victor • Vinicius Auricchio • Kauã
+                    Belizario</p>
             </div>
         </div>
-        <p class="text-center text-[10px] font-medium uppercase tracking-widest">© 2026 Universidade São Judas - Curso de Ciência da Computação</p>
+        <p class="text-center text-[10px] font-medium uppercase tracking-widest">© 2026 Universidade São Judas - Curso
+            de Ciência da Computação</p>
     </footer>
 
     <script>
@@ -518,4 +591,5 @@
 
     </script>
 </body>
+
 </html>
